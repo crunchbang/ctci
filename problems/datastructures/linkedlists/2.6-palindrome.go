@@ -51,3 +51,19 @@ func IterativePalindrom(str string) bool {
 	}
 	return true
 }
+
+// O(n) time + O(n) space
+func isPalindrome(input []int) bool {
+	ll := InitLinkedList(input)
+	var stack []int
+	for i := ll.Head; i != nil; i = i.Next {
+		stack = append(stack, i.Value)
+	}
+	for i := ll.Head; i != nil; i = i.Next {
+		if i.Value != stack[len(stack)-1] {
+			return false
+		}
+		stack = stack[:len(stack)-1]
+	}
+	return true
+}
