@@ -18,7 +18,7 @@ type LinkedList struct {
 	Len  int
 }
 
-// Init initalizes and returns a linkedlist with the given list of integers
+// InitLinkedList initalizes and returns a linkedlist with the given list of integers
 func InitLinkedList(input []int) (ll LinkedList) {
 	for _, val := range input {
 		ll.Add(val)
